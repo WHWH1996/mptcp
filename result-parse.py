@@ -26,7 +26,7 @@ def parse_file(fileName):
 	traceName = parse_trace_name(fileName)
 	ICT, loss = get_res(fileName)
 	if(traceName.split("-")[0] == "ring"):
-		ICT = ICT*float(traceName.split("-")[2][6:])*2*9
+		ICT = ICT*2
 	resultsLock.acquire()
 	results[traceName] = [ICT, loss]
 	resultsLock.release()

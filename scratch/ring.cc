@@ -143,7 +143,7 @@ void InstallAllApplications (NodeContainer servers)
       fout << "flowId:" << flow_count << " " << "srcIP:" << senderIndex << " dstIP:" << receiverIndex << std::endl;
       flow_count++;;
       //std::cout << "send from " << senderIndex << " to " << receiverIndex << ": " << LAYER_SIZE[layerIndex] / (WORKER_COUNT * LEAF_COUNT) << std::endl;
-      InstallTcpApplication(servers, LAYER_SIZE[layerIndex]  / (WORKER_COUNT * LEAF_COUNT),
+      InstallTcpApplication(servers, LAYER_SIZE[layerIndex],
                       senderIndex, receiverIndex,
                       flow_count, layerIndex+1);
     }
